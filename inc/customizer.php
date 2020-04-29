@@ -115,5 +115,24 @@ function ciy_front_page_functions($wp_customize)
         'type'          => 'dropdown-pages',
         'priority'      => 8
     ]);
+
+    // The logo
+    $wp_customize->add_section('logo_section', [
+        'title' => __('Logo', 'ciy_software_services_theme'),
+        'description'   => __('Set the logo for your site'),
+        'priority'      => 230
+    ]);
+
+    $wp_customize->add_setting('site_logo', [
+        'default'   => get_template_directory_uri() . '/img/logo.png',
+        'type'      => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'site_logo', [
+        'label'     => __('Your Logo', 'ciy_software_services_theme'),
+        'section'   => 'logo_section',
+        'setting'   => 'site_logo',
+        'priority'  => 1
+    ]));
 }
 add_action('customize_register', 'ciy_front_page_functions');

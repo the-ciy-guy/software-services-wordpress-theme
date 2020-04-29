@@ -17,6 +17,7 @@ if(have_posts()):
         <div class="showcase__header">
             <h2><?php the_title(); ?></h2>
         </div>
+</div>
     </div>
         <section class="ciy_content_standard">
             <?php the_content(); ?>    

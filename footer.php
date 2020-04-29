@@ -12,5 +12,6 @@ if(!is_front_page()):
 <?php 
 endif;
 wp_footer(); ?>
+</div>
 </body>
 </html>

@@ -131,6 +131,90 @@ h1 {
     z-index: 2;
 }
 
+/* Navigation Bar */
+.navbar {
+    background-color: var(--container-bg-color);
+    overflow: hidden;
+    height: 63px;
+}
+
+.navbar .navbar__logo a {
+    padding: 0;
+}
+
+.navbar__logo img {
+    height: 63px;
+    width: auto;
+    display: block;
+    float: left;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 20px 16px;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    margin: 0;
+    list-style: none;
+}
+
+/* Mobile Navigation */
+.side__nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side__nav a {
+    padding: 10px 10px 10px 30px;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+    transition: 0.4s;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.side__nav a:hover {
+    color: #fff;
+}
+
+.side__nav .btn__close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar__slider {
+    display: none;
+}
+
+/* Main Body */
+#main {
+    transition: margin-left 0.5s;
+    overflow: hidden;
+    width: 100%;
+}
+
 /* Pages */
 .showcase__img {
     opacity: 0.8;
@@ -175,4 +259,31 @@ h1 {
 
 .ciy_content_standard p {
     margin-bottom: 20px;
+}
+
+@media(max-width: 800px){
+    /* Navigation Bar */
+    .navbar__nav {
+        display: none;
+    }
+
+    .navbar__logo_mob {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar__logo_mob a {
+        padding: 0;
+    }
+
+    .navbar__logo_mob img {
+        height: 63px;
+        width: auto;
+        display: block;
+    }
+
+    .navbar__slider {
+        display: block;
+    }
 }
