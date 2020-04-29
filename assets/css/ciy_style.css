@@ -130,3 +130,49 @@ h1 {
 .hover-right .left:before {
     z-index: 2;
 }
+
+/* Pages */
+.showcase__img {
+    opacity: 0.8;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: var(--container-bg-color);
+}
+
+.showcase__header {
+    color: #fff;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section {
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 1px;
+}
+
+.ciy_content_standard {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+.ciy_content_standard h2 {
+    margin: 20px;
+}
+
+.ciy_content_standard p {
+    margin-bottom: 20px;
+}
