@@ -11,6 +11,7 @@ function add_navbar()
     register_nav_menus(
         [
             'ciy_navbar'    => __('Main CIY Navbar'),
+            'footer_services_navbar'    => __('CIY Footer Navbar')
         ]
     );
 }

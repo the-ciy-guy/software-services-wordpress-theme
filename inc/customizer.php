@@ -134,5 +134,136 @@ function ciy_front_page_functions($wp_customize)
         'setting'   => 'site_logo',
         'priority'  => 1
     ]));
+
+    /* === Footer Section === */
+    $wp_customize->add_section('footer_section', [
+        'title'     => __('Footer', 'ciy_software_services_theme'),
+        'description'   => sprintf(__('Setup your footer')),
+        'priority'  => 240
+    ]);
+
+    $wp_customize->add_setting('social_media_links', [
+        'default'   => _x('<i class="fab fa-facebook-square"></i>', 'ciy_software_services_theme'),
+        'type'      => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_media_links', [
+        'label' => __('Social Media Links', 'ciy_software_services_theme'),
+        'description'   => sprintf(__('Pick a social media icon')),
+        'section'   => 'footer_section',
+        'priority'  => 1,
+        'type'  => 'select',
+        'choices'   => [
+            'default'   => 'Facebook',
+            '<i class="fab fa-facebook-square"></i>' => 'Facebook',
+            '<i class="fab fa-twitter-square"></i>' => 'Twitter',
+            '<i class="fab fa-instagram-square"></i>'   => 'Instagram',
+            '<i class="fab fa-pinterest-square"></i>'   => 'Pinterest'
+        ]
+    ]));
+
+    $wp_customize->add_setting('social_media_url_one', [
+        'default'   => _x('http://www.facebook.com', 'ciy_software_services_theme'),
+        'type'  => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control('social_media_url_one', [
+        'description'   => sprintf(__('Your social media url', 'ciy_software_services_theme')),
+        'section'   => 'footer_section',
+        'priority'  => 2
+    ]);
+
+    $wp_customize->add_setting('social_media_links_two', [
+        'default'   => _x('<i class="fab fa-twitter-square"></i>', 'ciy_software_services_theme'),
+        'type'      => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_media_links_two', [
+        'label' => __('Social Media Links', 'ciy_software_services_theme'),
+        'description'   => sprintf(__('Pick a social media icon')),
+        'section'   => 'footer_section',
+        'priority'  => 2,
+        'type'  => 'select',
+        'choices'   => [
+            'default'   => 'Twitter',
+            '<i class="fab fa-facebook-square"></i>' => 'Facebook',
+            '<i class="fab fa-twitter-square"></i>' => 'Twitter',
+            '<i class="fab fa-instagram-square"></i>'   => 'Instagram',
+            '<i class="fab fa-pinterest-square"></i>'   => 'Pinterest'
+        ]
+    ]));
+
+    $wp_customize->add_setting('social_media_url_two', [
+        'default'   => _x('http://www.twitter.com', 'ciy_software_services_theme'),
+        'type'  => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control('social_media_url_two', [
+        'description'   => sprintf(__('Your social media url', 'ciy_software_services_theme')),
+        'section'   => 'footer_section',
+        'priority'  => 3
+    ]);
+
+    $wp_customize->add_setting('social_media_links_three', [
+        'default'   => _x('<i class="fab fa-instagram-square"></i>', 'ciy_software_services_theme'),
+        'type'      => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_media_links_three', [
+        'label' => __('Social Media Links', 'ciy_software_services_theme'),
+        'description'   => sprintf(__('Pick a social media icon')),
+        'section'   => 'footer_section',
+        'priority'  => 4,
+        'type'  => 'select',
+        'choices'   => [
+            'default'   => 'Instagram',
+            '<i class="fab fa-facebook-square"></i>' => 'Facebook',
+            '<i class="fab fa-twitter-square"></i>' => 'Twitter',
+            '<i class="fab fa-instagram-square"></i>'   => 'Instagram',
+            '<i class="fab fa-pinterest-square"></i>'   => 'Pinterest'
+        ]
+    ]));
+
+    $wp_customize->add_setting('social_media_url_three', [
+        'default'   => _x('http://www.instagram.com', 'ciy_software_services_theme'),
+        'type'  => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control('social_media_url_three', [
+        'description'   => sprintf(__('Your social media url', 'ciy_software_services_theme')),
+        'section'   => 'footer_section',
+        'priority'  => 5
+    ]);
+
+    $wp_customize->add_setting('social_media_links_four', [
+        'default'   => _x('<i class="fab fa-pinterest-square"></i>', 'ciy_software_services_theme'),
+        'type'      => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_media_links_four', [
+        'label' => __('Social Media Links', 'ciy_software_services_theme'),
+        'description'   => sprintf(__('Pick a social media icon')),
+        'section'   => 'footer_section',
+        'priority'  => 6,
+        'type'  => 'select',
+        'choices'   => [
+            'default'   => 'Pinterest',
+            '<i class="fab fa-facebook-square"></i>' => 'Facebook',
+            '<i class="fab fa-twitter-square"></i>' => 'Twitter',
+            '<i class="fab fa-instagram-square"></i>'   => 'Instagram',
+            '<i class="fab fa-pinterest-square"></i>'   => 'Pinterest'
+        ]
+    ]));
+
+    $wp_customize->add_setting('social_media_url_four', [
+        'default'   => _x('http://www.pinterest.com', 'ciy_software_services_theme'),
+        'type'  => 'theme_mod'
+    ]);
+
+    $wp_customize->add_control('social_media_url_four', [
+        'description'   => sprintf(__('Your social media url', 'ciy_software_services_theme')),
+        'section'   => 'footer_section',
+        'priority'  => 7
+    ]);
 }
 add_action('customize_register', 'ciy_front_page_functions');
