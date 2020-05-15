@@ -329,6 +329,13 @@ footer {
 
 
 @media(max-width: 800px){
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .button {
+        width: 12rem;
+    }
     /* Navigation Bar */
     .navbar__nav {
         display: none;
@@ -352,5 +359,14 @@ footer {
 
     .navbar__slider {
         display: block;
+    }
+
+    /* Footer */
+    footer {
+        display: block;
+    }
+
+    .footer_nav, .footer_social, .footer_logo {
+        margin-bottom: 20px;
     }
 }
